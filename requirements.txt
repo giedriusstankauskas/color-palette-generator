@@ -1,1 +1,4 @@
 flask
+flask-wtf
+colorthief
+wtforms

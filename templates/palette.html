@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% include 'base.html' %}
 
-</body>
-</html>
+{% block style %}
+    <style>
+        .swatch {
+            width: 3rem;
+            height: 3rem;
+            display: inline-block;
+            background: #ddd;
+            border-radius: 50%;
+        }
+
+        img {
+            border-radius: 3%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <img src="{{ url_for('static', filename="images/vilnius.jpeg") }}" width="600px">
+        <h3>Dominant color</h3>
+        <div class="swatch" style="background-color: rgb{{ dominant_color }}"></div>
+        <h3>Palette</h3>
+        <div class="swatches">
+            {% for color in palette %}
+                <div class="swatch" style="background-color: rgb{{ color }}"></div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
