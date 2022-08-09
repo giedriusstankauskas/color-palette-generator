@@ -1,0 +1,21 @@
+.swatch {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+#dominant-color {
+    margin-left: 12px;
+}
+
+body {
+    background-image: url("../images/gradient.jpg");
+    background-size: cover;
+}

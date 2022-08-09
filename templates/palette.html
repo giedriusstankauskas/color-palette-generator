@@ -1,31 +1,28 @@
 {% include 'base.html' %}
 
-{% block style %}
-    <style>
-        .swatch {
-            width: 3rem;
-            height: 3rem;
-            display: inline-block;
-            background: #ddd;
-            border-radius: 50%;
-        }
-
-        img {
-            border-radius: 3%;
-        }
-    </style>
-{% endblock %}
-
 {% block content %}
     <div class="container">
-        <img src="{{ url_for('static', filename="images/vilnius.jpeg") }}" width="600px">
-        <h3>Dominant color</h3>
-        <div class="swatch" style="background-color: rgb{{ dominant_color }}"></div>
-        <h3>Palette</h3>
-        <div class="swatches">
-            {% for color in palette %}
-                <div class="swatch" style="background-color: rgb{{ color }}"></div>
-            {% endfor %}
+        <div class="col-centered col-5 border border-light rounded mt-3">
+            <img src="{{ link }}" class="img-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <h5 >Dominant color</h5>
+                    <br>
+                    <div id="dominant-color" class="swatch" style="background-color: rgb{{ dominant_color }}"></div>
+                </div>
+                <div class="col-8">
+                    <h5>Palette</h5>
+                    <div class="swatches">
+                        {% for color in palette %}
+                            <div class="swatch" style="background-color: rgb{{ color }}"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
+    <div class="col-centered col-5">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-light btn-lg btn-block col-12">Try Another Image</a>
+    </div>
+
     </div>
 {% endblock %}
