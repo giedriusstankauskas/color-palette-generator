@@ -3,13 +3,13 @@
 
 <hr>
 Home screen<br>
-<img src="static/images/scr1.png" width="400">
+<img src="static/images/scr1.png" width="500">
 <hr>
 Enter image URL<br>
-<img src="static/images/scr2.png" width="400">
+<img src="static/images/scr2.png" width="500">
 <hr>
 Get your image, dominant color and color palette displayed<br>
-<img src="static/images/scr3.png" width="400">
+<img src="static/images/scr3.png" width="500">
 <hr>
 
 ## Initial Setup
